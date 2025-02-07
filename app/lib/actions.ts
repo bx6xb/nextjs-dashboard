@@ -93,7 +93,7 @@ export async function updateInvoiceAction(
     UPDATE invoices
     SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
     WHERE id = ${id}`
-  } catch (e) {
+  } catch {
     return { message: 'Database Error: Failed to Update Invoice.' }
   }
 
